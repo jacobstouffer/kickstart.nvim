@@ -26,6 +26,9 @@ vim.opt.signcolumn = 'yes'
 -- Decrease update time
 vim.opt.updatetime = 250
 
+-- Searches not case sensitive by default
+vim.opt.ignorecase = true
+
 -- Decrease mapped sequence wait time
 -- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
@@ -49,8 +52,9 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
-vim.keymap.set('n', '<C-d>', '<C-d>M', {})
-vim.keymap.set('n', '<C-u>', '<C-u>M', {})
+vim.keymap.set('n', '<C-d>', '<C-d>zz', {})
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
+vim.keymap.set('n', '<Enter>', 'i<Enter><Esc>^')
 
 --  See `:help wincmd` for a list of all window commands
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
