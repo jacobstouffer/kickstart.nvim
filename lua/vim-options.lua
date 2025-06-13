@@ -61,3 +61,10 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- buffer navigation
 vim.keymap.set('n', '<leader>l', ':bn<CR>', {})
 vim.keymap.set('n', '<leader>h', ':bp<CR>', {})
+
+-- terminal mapping
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], {})
+vim.keymap.set('t', '<C-h>', [[<C-\><C-n><C-w><C-h>]], {})
+vim.keymap.set('t', '<C-l>', [[<C-\><C-n><C-w><C-l>]], {})
+vim.keymap.set('t', '<C-j>', [[<C-\><C-n><C-w><C-j>]], {})
+vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-w><C-k>]], {})
