@@ -23,6 +23,8 @@ vim.opt.undofile = true
 -- Keep signcolumn on by default
 vim.opt.signcolumn = 'yes'
 
+vim.opt.ignorecase = true
+
 -- Decrease update time
 vim.opt.updatetime = 250
 
@@ -49,6 +51,7 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+vim.keymap.set('n', '<CR>', 'i<CR><C-c>', {})
 vim.keymap.set('n', '<C-d>', '<C-d>M', {})
 vim.keymap.set('n', '<C-u>', '<C-u>M', {})
 
